@@ -1,0 +1,108 @@
+<?php
+
+
+include "config.php";
+
+?>
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+		<link href="<?php echo $linkr;?>/lightspeed.css"  rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"  rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="dist/ResizeSensor.js"></script>
+        <script type="text/javascript" src="dist/theia-sticky-sidebar.js"></script>
+        <script type="text/javascript" src="js/test.js"></script>
+		<script type="text/javascript">
+//<![CDATA[
+(localStorage.getItem('mode')) === 'darkmode' ? document.querySelector('#mainContent').classList.add('dark'): document.querySelector('#mainContent').classList.remove('dark')
+//]]>
+ </script>
+		<style>
+			.content {
+				width: 75%;
+				float: left;
+				position: relative;
+			}
+
+			.leftSidebar {
+				width: 25%;
+				float: left;
+				padding: 0 30px 0 0;
+				position: relative;
+			}
+
+			.rightSidebar {
+				width: 25%;
+				float: right;
+				padding: 0 0 0 30px;
+				position: relative;
+			}
+			
+			button {
+                margin: 0 0 30px 0;
+			}
+		</style>
+	</head>
+	<body id="mainContent">
+	<?php
+include("topmenu.php");
+?>
+
+
+
+<!-- ticker bar -->
+
+<?php
+include("tickerbar.php");
+?>
+
+<?php
+include("mainbar.php");
+?>
+		
+		<div class="wrapper wrapperThreeColumns container">
+			<div class="content box">
+				<div class="theiaStickySidebar">
+				<?php include("maincenter.php"); ?>
+
+				</div>
+			</div>
+			
+			<div class="rightSidebar">
+				<div class="theiaStickySidebar">
+					<div class="box">
+					<?php include("sidebar.php"); ?>
+
+					
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="footer">
+		<?php include("footer.php"); ?>
+
+
+		</div>
+		
+		<script>
+			$(document).ready(function() {
+				$('.leftSidebar, .content, .rightSidebar')
+					.theiaStickySidebar({
+						additionalMarginTop: 30
+					});
+			});
+		</script>
+<!-- Template LocalHost Plugins -->
+<?php
+include("alljavascript.php");
+?>
+
+<?php include("mobile_menu.php"); ?>
+<!-- Blogger Default Widget Scripts -->
+
+
+	</body>
+</html>
