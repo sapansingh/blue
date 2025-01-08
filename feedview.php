@@ -1,17 +1,13 @@
 
 <main id="feed-view" style="">
 
-    <div class="theiaStickySidebar"
-        style="padding-top: 0px; padding-bottom: 1px; position: static; transform: none; top: 0px; left: 401.5px;">
         <div class="main section" id="main" name="Main Recent Posts">
             <div class="widget Blog" data-version="2" id="Blog1">
-                <div class="blog-posts hfeed container item-post-wrap">
+                <div class="blog-posts hfeed item-post-wrap">
                     <article class="blog-post hentry item-post" itemscope="itemscope"
                         itemtype="https://schema.org/CreativeWork">
                         <div class="post-inner-area">
                         
-
-
                         <!-- breadcome  heading -->
                             <nav id="breadcrumb"><a href="<?php echo $linkr;?>">Home</a><em
                                     class="delimiter"></em><a class="b-label" href="<?php echo $linkr."/labels"."/".$category_name;?>"><?php echo $category_name;?></a><em
@@ -23,12 +19,6 @@
                             <h1 class="entry-title">
                             <?php echo $title;?>
                             </h1>
-
-
-
-
-
-
                             <div class="post-snip" itemprop="author" itemscope="itemscope"
                                 itemtype="https://schema.org/Person">
                                 <span class="comment-bubble show">
@@ -244,5 +234,5 @@ $it=$it+1;
 
 
         <div class="clearfix"></div>
-    </div>
+  
 </main>

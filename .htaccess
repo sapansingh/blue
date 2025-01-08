@@ -1,5 +1,5 @@
 RewriteEngine On
-ErrorDocument 404 http://aims-doc.com/error404
+ErrorDocument 404 http://localhost/blue/error404
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
@@ -7,6 +7,7 @@ RewriteCond %{REQUEST_FILENAME} !-l
 #RewriteRule ^contents/([0-9]+)/([0-9a-zA-Z_-]+) content.php?i=$1&t=$2 [QSA,L]
 RewriteRule ^contents/([^/]*) content.php?i=$1&t=$2 [QSA,L]
 RewriteRule ^search/([0-9]+) search.php?page=$1 [QSA,L]
+RewriteRule ^all/([0-9]+) all.php?page=$1 [QSA,L]
 RewriteRule ^home/([0-9a-zA-Z_-]+) webabouts.php?pl=$1 [QSA,L]
 RewriteRule ^labels/([0-9a-zA-Z_-]+) labels.php?lab=$1 [QSA,L]
 #RewriteRule ^Entertainment/([0-9]+) Entertainment.php?page=$1 [QSA,L]

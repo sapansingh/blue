@@ -5,70 +5,72 @@ include "config.php";
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Home</title>
-  <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9994499269501525"
-     crossorigin="anonymous"></script>
-    <meta name="google-site-verification" content="djL9yadqQSbZ7Un35MF4Y8yu6ffgTAZibRJelmEj0KE" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link href="<?php echo $linkr;?>/lightspeed.css"  rel="stylesheet">
+<html>
+	<head>
+		<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+		<link href="<?php echo $linkr;?>/lightspeed.css"  rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"  rel="stylesheet">
-  <link href="<?php echo $linkr;?>/style.css"  rel="stylesheet">
-  
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-56VHR9EP8Z"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-56VHR9EP8Z');
-</script>
-
-  <style>
-
-
-  </style>
-</head>
-<body class="index home feed-view" id="mainContent" style="transform: none;">
-<script type="text/javascript">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="<?php echo $linkr;?>/dist/ResizeSensor.js"></script>
+        <script type="text/javascript" src="<?php echo $linkr;?>/dist/theia-sticky-sidebar.js"></script>
+        <script type="text/javascript" src="<?php echo $linkr;?>/js/test.js"></script>
+		<script type="text/javascript">
 //<![CDATA[
 (localStorage.getItem('mode')) === 'darkmode' ? document.querySelector('#mainContent').classList.add('dark'): document.querySelector('#mainContent').classList.remove('dark')
 //]]>
  </script>
-<div class="admin-area" style="display:none">
-<div class="admin-section section" id="admin" name="Theme Options (Admin Panel)">
-<div class="widget LinkList" data-version="2" id="LinkList27">
+		<style>
+    /* Default Layout: Three columns (content, left sidebar, right sidebar) */
+    .content {
+        width: 70%;
+        float: left;
+        position: relative;
+    }
 
-          <script type="text/javascript">
-          //<![CDATA[
-          
+    .leftSidebar {
+        width: 25%;
+        float: left;
+        padding: 0 30px 0 0;
+        position: relative;
+    }
 
-              var fixedSidebar = true;
-            
+    .rightSidebar {
+        width: 25%;
+        float: right;
+        padding: 0 0 0 30px;
+        position: relative;
+    }
 
-              var fixedMenu = true;
-            
+    button {
+        margin: 0 0 30px 0;
+    }
 
-              var showMoreText = "Show More";
-            
-
-          //]]>
-          </script>
+    /* Mobile Layout: Stack everything in one column */
+    @media screen and (max-width: 768px) {
+        .content, .leftSidebar, .rightSidebar {
+            width: 100%;
+            float: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
         
-</div></div>
-</div>
-<!-- Outer Wrapper -->
-<div id="outer-wrapper" style="transform: none;">
+        .leftSidebar {
+            padding-right: 0;
+        }
 
-<!-- menu -->
-<?php
+        .rightSidebar {
+            padding-left: 0;
+        }
+
+        /* Optionally, reduce margin on buttons for mobile devices */
+        button {
+            margin: 0 0 20px 0;
+        }
+    }
+</style>
+	</head>
+	<body id="mainContent">
+	<?php
 include("topmenu.php");
 ?>
 
@@ -80,31 +82,40 @@ include("topmenu.php");
 include("tickerbar.php");
 ?>
 
+	
+		<div class="wrapper wrapperThreeColumns container">
+			<div class="content box">
+				<div class="theiaStickySidebar">
+                <?php include("readdata.php"); ?>
+
+				</div>
+			</div>
+			
+			<div class="rightSidebar">
+				<div class="theiaStickySidebar">
+					<div class="box">
+					<?php include("sidebar.php"); ?>
+
+					
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="footer">
+		<?php include("footer.php"); ?>
 
 
-<div class="clearfix"></div>
-<!-- Content Wrapper -->
-<div id="center-container" style="transform: none;">
-<div class="container outer-container" style="transform: none;">
-<!-- Main Wrapper -->
-<?php include("readdata.php"); ?>
-
-<!-- side bar -->
-
-<?php include("sidebar.php"); ?>
-
-</div>
-</div>
-
-</div>
-<?php include("footer.php"); ?>
-
-
-
-
-
-</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" type="text/javascript"></script>
+		</div>
+		
+		<script>
+			$(document).ready(function() {
+				$('.leftSidebar, .content, .rightSidebar')
+					.theiaStickySidebar({
+						additionalMarginTop: 30
+					});
+			});
+		</script>
 <!-- Template LocalHost Plugins -->
 <?php
 include("alljavascript.php");
@@ -114,10 +125,5 @@ include("alljavascript.php");
 <!-- Blogger Default Widget Scripts -->
 
 
-
-
-</body>
-
-    </html>
-
-
+	</body>
+</html>

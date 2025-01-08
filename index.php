@@ -5,72 +5,72 @@ include "config.php";
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Aims-Doc.com</title>
-  <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="index, follow">
-    <meta name="description" content="Newstazaat: Your Gateway to Fresh News and Cutting-Edge Technology Insights Welcome to Newstazaat, your premier destination for the latest news and in-depth technology insights. Our blog is dedicated to keeping you informed and ahead of the curve in today's fast-paced world. Here's what you can expect from Newstazaat">
-  <link href="<?php echo $linkr;?>/lightspeed.css"  rel="stylesheet">
+<html>
+	<head>
+		<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+		<link href="<?php echo $linkr;?>/lightspeed.css"  rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"  rel="stylesheet">
-        <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
-        <script type="text/javascript" src="dist/ResizeSensor.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="dist/ResizeSensor.js"></script>
         <script type="text/javascript" src="dist/theia-sticky-sidebar.js"></script>
         <script type="text/javascript" src="js/test.js"></script>
-      
-  <!--<link href="<?php echo $linkr;?>/style.css"  rel="stylesheet">-->
-<!-- Google Tag Manager -->
-
-<!-- End Google Tag Manager -->
-<!-- Google tag (gtag.js) -->
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-56VHR9EP8Z');
-</script>
-
-</head>
-<body class="index home feed-view" id="mainContent" style="transform: none;">
-
-<script type="text/javascript">
+		<script type="text/javascript">
 //<![CDATA[
 (localStorage.getItem('mode')) === 'darkmode' ? document.querySelector('#mainContent').classList.add('dark'): document.querySelector('#mainContent').classList.remove('dark')
 //]]>
  </script>
-<div class="admin-area" style="display:none">
-<div class="admin-section section" id="admin" name="Theme Options (Admin Panel)">
-<div class="widget LinkList" data-version="2" id="LinkList27">
+		<style>
+    /* Default Layout: Three columns (content, left sidebar, right sidebar) */
+    .content {
+        width: 75%;
+        float: left;
+        position: relative;
+    }
 
-          <script type="text/javascript">
-          //<![CDATA[
-          
+    .leftSidebar {
+        width: 25%;
+        float: left;
+        padding: 0 30px 0 0;
+        position: relative;
+    }
 
-              var fixedSidebar = true;
-            
+    .rightSidebar {
+        width: 25%;
+        float: right;
+        padding: 0 0 0 30px;
+        position: relative;
+    }
 
-              var fixedMenu = true;
-            
+    button {
+        margin: 0 0 30px 0;
+    }
 
-              var showMoreText = "Show More";
-            
-
-          //]]>
-          </script>
+    /* Mobile Layout: Stack everything in one column */
+    @media screen and (max-width: 768px) {
+        .content, .leftSidebar, .rightSidebar {
+            width: 100%;
+            float: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
         
-</div></div>
-</div>
-<!-- Outer Wrapper -->
-<div id="outer-wrapper" style="transform: none;">
+        .leftSidebar {
+            padding-right: 0;
+        }
 
-<!-- menu -->
-<?php
+        .rightSidebar {
+            padding-left: 0;
+        }
+
+        /* Optionally, reduce margin on buttons for mobile devices */
+        button {
+            margin: 0 0 20px 0;
+        }
+    }
+</style>
+	</head>
+	<body id="mainContent">
+	<?php
 include("topmenu.php");
 ?>
 
@@ -85,31 +85,40 @@ include("tickerbar.php");
 <?php
 include("mainbar.php");
 ?>
+		
+		<div class="wrapper wrapperThreeColumns container">
+			<div class="content box">
+				<div class="theiaStickySidebar">
+				<?php include("maincenter.php"); ?>
+
+				</div>
+			</div>
+			
+			<div class="rightSidebar">
+				<div class="theiaStickySidebar">
+					<div class="box">
+					<?php include("sidebar.php"); ?>
+
+					
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="footer">
+		<?php include("footer.php"); ?>
 
 
-<div class="clearfix"></div>
-<!-- Content Wrapper -->
-<div id="center-container" style="transform: none;">
-<div class="container outer-container" style="transform: none;">
-<!-- Main Wrapper -->
-<?php include("maincenter.php"); ?>
-
-<!-- side bar -->
-
-<?php include("sidebar.php"); ?>
-
-</div>
-</div>
-
-</div>
-<?php include("footer.php"); ?>
-
-
-
-
-
-</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" type="text/javascript"></script>
+		</div>
+		
+		<script>
+			$(document).ready(function() {
+				$('.leftSidebar, .content, .rightSidebar')
+					.theiaStickySidebar({
+						additionalMarginTop: 30
+					});
+			});
+		</script>
 <!-- Template LocalHost Plugins -->
 <?php
 include("alljavascript.php");
@@ -119,10 +128,5 @@ include("alljavascript.php");
 <!-- Blogger Default Widget Scripts -->
 
 
-
-
-</body>
-
-    </html>
-
-
+	</body>
+</html>

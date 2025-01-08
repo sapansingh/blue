@@ -1,5 +1,6 @@
-<main id="feed-view" style="position: relative; overflow: visible; box-sizing: border-box; min-height: 1px;">
-    <div class="theiaStickySidebar" style="padding-top: 0px; padding-bottom: 1px; position: static; transform: none;">
+<div class="queryMessage">
+<span class="query-info query-success">Showing posts matching the search for <span class="search-query">What Happen in Godhra train burning incident in 2002</span></span><a class="show-more" href="https://bytebytego.blogspot.com/">Show all</a>
+</div>
         <div class="main section" id="main" name="Main Recent Posts">
             <div class="widget Blog" data-version="2" id="Blog1">
                 <div class="blog-posts hfeed container post-filter-wrap">
@@ -92,7 +93,7 @@ $it=$it+1;
 
         </div>
 
-    </div>
+
 
 
    <div class="blog-pager container" id="blog-pager">
@@ -112,19 +113,19 @@ $it=$it+1;
         //    echo "<a href='$linkr/home/$page'>  Prev </a>";   
 
         
-          echo "<a class='page-num page-prev' href='$linkr/search/$pages'></a>";
+          echo "<a class='page-num page-prev' href='$linkr/all/$pages'></a>";
         }       
                    
         for ($i=1; $i<=$total_pages; $i++) {   
           if ($i == $page) {   
           //    $pagLink .= "<a class = 'active' href='$linkr/home/".$i."'>".$i." </a>";   
-              $pagLink.= "<a class='page-num page-active' href='$linkr/search/".$i."'>".$i."</a>";
+              $pagLink.= "<a class='page-num page-active' href='$linkr/all/".$i."'>".$i."</a>";
              
           }               
           else  {   
           //    $pagLink .= "<a href='$linkr/home/".$i."'>   
             //                                    ".$i." </a>";     
-            $pagLink.= "<a class='page-num' href='$linkr/search/".$i."'>".$i."</a>";
+            $pagLink.= "<a class='page-num' href='$linkr/all/".$i."'>".$i."</a>";
              
           }   
         };     
@@ -133,7 +134,7 @@ $it=$it+1;
         if($page<$total_pages){   
           $pagesr=$page+1;
           //  echo "<a href='$linkr/home/$page'>  Next </a>";   
-          echo "<a class='page-num page-next' href='$linkr/search/$pagesr'></a>";
+          echo "<a class='page-num page-next' href='$linkr/all/$pagesr'></a>";
         //     echo "  <li class='page-item'>
         //     <a class='page-link' href='$linkr/home/$pagesr'>Next</a>
         //   </li>";
@@ -146,7 +147,95 @@ $it=$it+1;
 
 <!--new include data-->
 
-        
-  
+<div class="post-footer">
+                            <div class="related-light type-related open-iki">
+                                
+                                <!-- <div class="widget-title">
+                                    <h3 class="title">You May Like</h3>
+                                    <a class="simple-viewmore"
+                                        href="https://labwas.blogspot.com/search/label/Technology">
+                                        Show more</a>
+                                </div> -->
 
-</main>
+
+
+<!--Suggestion tool-->
+
+                                <div class="xx0xx-wraprelated">
+                                    <div class="LightSpeedWorks">
+                                    
+<!--                                     
+                                    <div class="LightSpeedSet">
+                                            <div class="LightSpeedSet-thumb"><a class="post-filter-link image-nos"
+                                                    href="https://labwas.blogspot.com/2024/05/operation-system-currently-use.html"><img
+                                                        class="snip-thumbnail lazy-img"
+                                                        alt="Operation system currently use"
+                                                        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi-NTjicjPwHybOYhcPb6raFW59KulWhcFUk3b410uwR6ez5_Vh6LKUqORycfTkElU7rfnaGI1dJsmniOJwgh_EdNKLK9vQSr5sYj7OGSVJ3GFu6m6Td4wLU4f0R6r447uuaGF02egQ28-0Q9jxWdZzhOKCYbuUrYqho6MV6af1zPBoifoG8_y8WlP81dc/w74-h74-p-k-no-nu/download.jpg"></a>
+                                            </div>
+                                            <div class="LightSpeedSet-box">
+                                                <h2 class="entry-title"><a
+                                                        href="https://labwas.blogspot.com/2024/05/operation-system-currently-use.html">Operation
+                                                        system currently use</a></h2>
+                                                <div class="post-snip"><span class="post-date">May 29, 2024</span></div>
+                                            </div>
+                                        </div> -->
+
+
+
+                                        <?php
+                                        include("config.php");
+                    $sql3="SELECT bp.id,bp.blog_title,bp.reg_date,blog_post,ct.category_name,bp.image FROM `blog_post` bp JOIN `category` ct ON ct.id=bp.category_id ORDER BY reg_date DESC LIMIT 3";
+
+$result=mysqli_query($conn,$sql3);
+if(mysqli_num_rows($result)>0){
+    $it=0;
+    while($row=mysqli_fetch_assoc($result)){
+       
+$id=$row["id"];
+$blog_title=$row["blog_title"];
+$images=$row["image"];
+$category_name=$row["category_name"];
+$reg_date=$row["reg_date"];
+$weber=$web.$images;
+$link=$linkr."/contents"."/".$id."/".$blog_title;
+
+echo "<div class='LightSpeedSet'>
+        <div class='LightSpeedSet-thumb'><a class='post-filter-link image-nos'
+                href='$link'><img
+                    class='snip-thumbnail lazy-img'
+                    alt='Operation system currently use'
+                    src='".$weber."'></a>
+        </div>
+        <div class='LightSpeedSet-box'>
+            <h2 class='entry-title'><a
+                    href='".$blog_title."'>".$blog_title."</a></h2>
+            <div class='post-snip'><span class='post-date'>May 29, 2024</span></div>
+        </div>
+    </div>";
+
+$it=$it+1;
+   
+    
+    }
+
+    
+    }
+
+
+?>
+
+
+                                    
+
+
+
+
+
+                                    </div>
+                                </div>
+<!--Suggestion tool-->
+
+
+                                
+                            </div>
+                        </div>
