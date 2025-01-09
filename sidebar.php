@@ -8,27 +8,27 @@
 <div class="widget-content">
 <ul class="socialFilter social-bg social">
 <li>
-<a class="facebook" href="http://fb.com/pikitemplates" rel="noopener noreferrer" target="_blank" title="facebook">
+<a class="facebook" href="<?php echo $facebook;?>" rel="noopener noreferrer" target="_blank" title="facebook">
 facebook
 </a>
 </li>
 <li>
-<a class="twitter" href="#" rel="noopener noreferrer" target="_blank" title="twitter">
+<a class="twitter" href="<?php  echo $twitter;?>" rel="noopener noreferrer" target="_blank" title="twitter">
 twitter
 </a>
 </li>
 <li>
-<a class="whatsapp" href="https://whatsapp.com/channel/0029VaainmVLNSaClyuQEk2p" rel="noopener noreferrer" target="_blank" title="whatsapp">
+<a class="whatsapp" href="<?php echo $whatsapp;?>" rel="noopener noreferrer" target="_blank" title="whatsapp">
 whatsapp
 </a>
 </li>
 <li>
-<a class="instagram" href="#" rel="noopener noreferrer" target="_blank" title="instagram">
+<a class="instagram" href="<?php echo $instagram;?>" rel="noopener noreferrer" target="_blank" title="instagram">
 instagram
 </a>
 </li>
 <li>
-<a class="youtube" href="#" rel="noopener noreferrer" target="_blank" title="youtube">
+<a class="youtube" href="<?php echo $youtube;?>" rel="noopener noreferrer" target="_blank" title="youtube">
 youtube
 </a>
 </li>
@@ -205,7 +205,7 @@ echo "<li>
 <div class="widget BlogSearch" data-version="2" id="BlogSearch1">
 <div class="widget-title"><h3 class="title">Search This Blog</h3></div>
 <div class="widget-content" role="search">
-<form action="https://newstazaat.com/search" class="search-form" target="_top">
+<form action="<?php echo $linkr; ?>/search" class="search-form" target="_top">
 <input aria-label="Search this blog" autocomplete="off" class="search-input" name="q" placeholder="Search this blog" value="">
 <input class="search-action" type="submit" value="Search">
 </form>
@@ -213,25 +213,6 @@ echo "<li>
 </div>
 
 
-<!-- <div class="widget Profile" data-version="2" id="Profile1">
-<div class="widget-title"><h3 class="title">About Me</h3></div>
-<div class="widget-content individual">
-<a href="https://www.blogger.com/profile/07865532278980536827" rel="nofollow">
-<div class="default-avatar"></div>
-</a>
-<div class="profile-info">
-<dl class="profile-datablock">
-<dt class="profile-data">
-<a class="profile-link g-profile" href="https://www.blogger.com/profile/07865532278980536827" rel="author nofollow">
-sapan singh
-</a>
-</dt>
-</dl>
-<a class="profile-link" href="https://www.blogger.com/profile/07865532278980536827" rel="author nofollow">
-View my complete profile
-</a>
-</div>
-</div>
-</div> -->
+
 
 </div></div>

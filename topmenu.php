@@ -1,3 +1,26 @@
+<?php
+
+$getsocial="SELECT * FROM `social`";
+
+$result=mysqli_query($conn,$getsocial);
+
+if(mysqli_num_rows($result)>0){
+    while($row=mysqli_fetch_assoc($result)){
+
+      
+        $facebook=$row['facebook'];
+
+       
+        $twitter=$row['twitter'];
+        $whatsapp=$row['whatsapp'];
+        $instagram=$row['instagram'];
+        $youtube=$row['youtube'];
+    }
+}
+
+
+
+?>
 <!-- Top Menu Wrapper -->
 <div class="top-bar ">
     <div class="container">
@@ -37,13 +60,13 @@
                     <div class="widget LinkList" data-version="2" id="LinkList4">
                         <div class="widget-content">
                             <ul class="social">
-                                <li><a class="facebook" href="https://newstazaat.com"
+                                <li><a class="facebook" href="<?php echo $facebook;?>"
                                         rel="noopener noreferrer" target="_blank"></a></li>
-                                <li><a class="whatsapp" href="#" rel="noopener noreferrer" target="_blank"></a></li>
-                                <li><a class="telegram" href="#" rel="noopener noreferrer" target="_blank"></a></li>
-                                <li><a class="twitter" href="https://newstazaat.com"
+                                <li><a class="whatsapp" href="<?php echo $whatsapp;?>" rel="noopener noreferrer" target="_blank"></a></li>
+                                <li><a class="telegram" href="<?php echo $telegram;?>" rel="noopener noreferrer" target="_blank"></a></li>
+                                <li><a class="twitter" href="<?php echo $twitter;?>"
                                         rel="noopener noreferrer" target="_blank"></a></li>
-                                <li><a class="instagram" href="https://newstazaat.com"
+                                <li><a class="instagram" href="<?php echo $instagram;?>"
                                 rel="noopener noreferrer" target="_blank"></a></li>
                             </ul>
                         </div>
@@ -177,7 +200,7 @@ $it=$it+1;
                                 <a class="search-container-close" href="#"></a>
                                 <div class="search-container-wrapper">
                                     <div class="search-msg">Type Here to Get Search Results !</div>
-                                    <form action="/search" class="search-container" method="get" role="search">
+                                    <form action="<?php echo $linkr; ?>/search" class="search-container" method="get" role="search">
                                         <input class="search-input" name="q" placeholder="Search Here..."
                                             spellcheck="false" type="text">
                                         <i class="fa fa-search">

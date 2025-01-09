@@ -1,4 +1,52 @@
 <script>
+  $(document).ready(function() {
+    // Facebook Share Button
+    $('.facebook-f a').click(function() {
+      window.open($(this).attr('data-url'), 'facebook-share', 'width=550,height=650');
+    });
+
+    // Twitter Share Button
+    $('.twitter a').click(function() {
+      window.open($(this).attr('data-url'), 'twitter-share', 'width=550,height=460');
+    });
+
+    // WhatsApp Desktop Share Button
+    $('.whatsapp-desktop a').click(function() {
+      window.open($(this).attr('data-url'), 'whatsapp-desktop-share', 'width=550,height=650');
+    });
+
+    // WhatsApp Mobile Share Button
+    $('.whatsapp-mobile a').click(function() {
+      window.open($(this).attr('data-url'), 'whatsapp-mobile-share', 'width=550,height=650');
+    });
+
+    // Pinterest Share Button
+    $('.pinterest a').click(function() {
+      window.open($(this).attr('data-url'), 'pinterest-share', 'width=735,height=750');
+    });
+
+    // LinkedIn Share Button
+    $('.linkedin a').click(function() {
+      window.open($(this).attr('data-url'), 'linkedin-share', 'width=1000,height=700');
+    });
+
+    // Reddit Share Button
+    $('.reddit a').click(function() {
+      window.open($(this).attr('data-url'), 'reddit-share', 'width=550,height=460');
+    });
+
+    // Telegram Share Button
+    $('.telegram a').click(function() {
+      window.open($(this).attr('data-url'), 'telegram-share', 'width=550,height=460');
+    });
+
+    // Email Share Button
+    $('.email a').click(function() {
+      window.open($(this).attr('data-url'), 'email-share', 'width=550,height=460');
+    });
+  });
+</script>
+<script>
  
 $(document).ready(function(){
   $('a[itemprop="url2"]').click(function(e) {

@@ -120,7 +120,7 @@ $link=$linkr."/contents"."/".$id."/".$blog_title;
 
 echo "<div class='LightSpeedSet'>
         <div class='LightSpeedSet-thumb'><a class='post-filter-link image-nos'
-                href='$link'><img
+                href='$link/contents/'><img
                     class='snip-thumbnail lazy-img'
                     alt='Operation system currently use'
                     src='".$weber."'></a>

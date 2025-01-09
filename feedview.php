@@ -13,8 +13,6 @@
                                     class="delimiter"></em><a class="b-label" href="<?php echo $linkr."/labels"."/".$category_name;?>"><?php echo $category_name;?></a><em
                                     class="delimiter"></em><span class="current"><?php echo $title;?></span>
                             </nav>
-
-
                             <!-- title  heading -->
                             <h1 class="entry-title">
                             <?php echo $title;?>
@@ -51,7 +49,7 @@
                             <div class="label-container">
                                 <span>Tags</span>
                                 <div class="label-head Label">
-                                    <a class="label-link" href="https://labwas.blogspot.com/search/label/Technology"
+                                    <a class="label-link" href="<?php echo $linkr;?>/labels/Technology"
                                         rel="tag"><?php echo $category_name;?>    </a>
                                 </div>
                             </div>
@@ -64,36 +62,36 @@
                                 <ul class="share-light social-footer social-bg">
                                     <li class="share-icon"><span class="s-icon"></span></li>
                                     <li class="facebook-f"><a class="facebook window-piki" data-height="650"
-                                            data-url="https://www.facebook.com/sharer.php?u=https://labwas.blogspot.com/2024/05/operation-system-currently-use.html"
+                                            data-url="https://www.facebook.com/sharer.php?u=<?php echo $lister?>"
                                             data-width="550" href="javascript:;" rel="nofollow" title="Facebook"></a>
                                     </li>
                                     <li class="twitter"><a class="twitter window-piki" data-height="460"
-                                            data-url="https://twitter.com/intent/tweet?url=https://labwas.blogspot.com/2024/05/operation-system-currently-use.html&amp;text=Operation system currently use"
+                                            data-url="https://twitter.com/intent/tweet?url=<?php echo $lister?>"
                                             data-width="550" href="javascript:;" rel="nofollow" title="Twitter"></a>
                                     </li>
                                     <li class="whatsapp whatsapp-desktop"><a class="whatsapp window-piki"
                                             data-height="650"
-                                            data-url="https://web.whatsapp.com/send?text=Operation system currently use | https://labwas.blogspot.com/2024/05/operation-system-currently-use.html"
+                                            data-url="https://web.whatsapp.com/send?text=<?php echo $lister?>"
                                             data-width="550" href="javascript:;" rel="nofollow" title="Whatsapp"></a>
                                     </li>
                                     <li class="whatsapp whatsapp-mobile"><a class="whatsapp window-piki"
                                             data-height="650"
-                                            data-url="https://api.whatsapp.com/send?text=Operation system currently use | https://labwas.blogspot.com/2024/05/operation-system-currently-use.html"
+                                            data-url="https://api.whatsapp.com/send?<?php echo $lister?>"
                                             data-width="550" href="javascript:;" rel="nofollow" target="_blank"
                                             title="Whatsapp"></a></li>
                                     <li class="pinterest"><a class="pinterest window-piki" data-height="750"
-                                            data-url="https://www.pinterest.com/pin/create/button/?url=https://labwas.blogspot.com/2024/05/operation-system-currently-use.html&amp;media=https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi-NTjicjPwHybOYhcPb6raFW59KulWhcFUk3b410uwR6ez5_Vh6LKUqORycfTkElU7rfnaGI1dJsmniOJwgh_EdNKLK9vQSr5sYj7OGSVJ3GFu6m6Td4wLU4f0R6r447uuaGF02egQ28-0Q9jxWdZzhOKCYbuUrYqho6MV6af1zPBoifoG8_y8WlP81dc/w536-h305/download.jpg&amp;description=Operation system currently use"
+                                            data-url="https://www.pinterest.com/pin/create/button/?url=<?php echo $lister?>"
                                             data-width="735" href="javascript:;" rel="nofollow" title="Pinterest"></a>
                                     </li>
                                     <li class="linkedin"><a class="linkedin window-piki" data-height="700"
-                                            data-url="https://www.linkedin.com/shareArticle?url=https://labwas.blogspot.com/2024/05/operation-system-currently-use.html"
+                                            data-url="https://www.linkedin.com/shareArticle?url=<?php echo $lister?>"
                                             data-width="1000" href="javascript:;" rel="nofollow" title="LinkedIn"></a>
                                     </li>
                                     <li class="reddit"><a class="reddit window-piki" data-height="460"
-                                            data-url="https://reddit.com/submit?url=https://labwas.blogspot.com/2024/05/operation-system-currently-use.html&amp;title=Operation system currently use"
+                                            data-url="https://reddit.com/submit?url=<?php echo $lister?>"
                                             data-width="550" href="javascript:;" rel="nofollow" title="Reddit"></a></li>
                                     <li class="telegram"><a class="telegram window-piki" data-height="460"
-                                            data-url="https://telegram.me/share/url?url=https://labwas.blogspot.com/2024/05/operation-system-currently-use.html&amp;text=Operation system currently use"
+                                            data-url="https://telegram.me/share/url?url=<?php echo $lister?>"
                                             data-width="550" href="javascript:;" rel="nofollow" title="Telegram"></a>
                                     </li>
                                     <li class="email"><a class="email window-piki" data-height="460"
@@ -206,11 +204,6 @@ $it=$it+1;
 
 
 ?>
-
-
-                                    
-
-
 
 
 

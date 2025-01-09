@@ -1,11 +1,11 @@
 <div id="SpeedL-container">
 <div class="area-light">
 <div class="social-light"><ul class="social">
-<li><a class="facebook" href="https://facebook.com/pikitemplates" rel="noopener noreferrer" target="_blank"></a></li>
-<li><a class="whatsapp" href="#" rel="noopener noreferrer" target="_blank"></a></li>
-<li><a class="telegram" href="#" rel="noopener noreferrer" target="_blank"></a></li>
-<li><a class="twitter" href="https://twitter.com/PikiTemplates" rel="noopener noreferrer" target="_blank"></a></li>
-<li><a class="instagram" href="https://www.instagram.com/pikitemplates.com/" rel="noopener noreferrer" target="_blank"></a></li>
+<li><a class="facebook" href="<?php echo $facebook;?>" rel="noopener noreferrer" target="_blank"></a></li>
+<li><a class="whatsapp" href="<?php echo $whatsapp;?>" rel="noopener noreferrer" target="_blank"></a></li>
+<li><a class="telegram" href="<?php echo $telegram;?>" rel="noopener noreferrer" target="_blank"></a></li>
+<li><a class="twitter" href="<?php echo $twitter;?>" rel="noopener noreferrer" target="_blank"></a></li>
+<li><a class="instagram" href="<?php echo $instagram;?>" rel="noopener noreferrer" target="_blank"></a></li>
 </ul></div>
 <span class="hide-LSpeed-filter"></span>
 </div>

@@ -1,6 +1,4 @@
-<div class="queryMessage">
-<span class="query-info query-success">Showing posts matching the search for <span class="search-query">What Happen in Godhra train burning incident in 2002</span></span><a class="show-more" href="https://bytebytego.blogspot.com/">Show all</a>
-</div>
+
         <div class="main section" id="main" name="Main Recent Posts">
             <div class="widget Blog" data-version="2" id="Blog1">
                 <div class="blog-posts hfeed container post-filter-wrap">
@@ -208,7 +206,7 @@ echo "<div class='LightSpeedSet'>
         </div>
         <div class='LightSpeedSet-box'>
             <h2 class='entry-title'><a
-                    href='".$blog_title."'>".$blog_title."</a></h2>
+                    href='$link'>".$blog_title."</a></h2>
             <div class='post-snip'><span class='post-date'>May 29, 2024</span></div>
         </div>
     </div>";

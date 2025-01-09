@@ -11,18 +11,18 @@
 </div>
 <div class="about-content">
 <div class="widget-title"><h3 class="title">About Us</h3></div>
-<span class="image-caption">www.newstazaat.com round-the-clock latest news, entertainment, technology, business, and lifestyle. The latest buzz, all in one place. Stay connected..!</span>
+<span class="image-caption"><?php echo $footertitle; ?></span>
 </div>
 </div>
 </div><div class="widget LinkList" data-version="2" id="LinkList7">
 <div class="widget-content">
 <div class="widget-title"><h3 class="title">Follow Us</h3></div>
 <ul class="social-footer social-bg">
-<li class="facebook-f"><a class="facebook-f" href="https://www.aims-doc.com/" rel="noopener noreferrer" target="_blank"></a></li>
-<li class="twitter"><a class="twitter" href="https://www.aims-doc.com/" rel="noopener noreferrer" target="_blank"></a></li>
-<li class="youtube"><a class="youtube" href="https://www.aims-doc.com/" rel="noopener noreferrer" target="_blank"></a></li>
-<li class="instagram"><a class="instagram" href="https://www.aims-doc.com/" rel="noopener noreferrer" target="_blank"></a></li>
-<li class="reddit"><a class="reddit" href="https://www.aims-doc.com/" rel="noopener noreferrer" target="_blank"></a></li>
+<li class="facebook-f"><a class="facebook-f" href="<?php echo $facebook; ?>" rel="noopener noreferrer" target="_blank"></a></li>
+<li class="twitter"><a class="twitter" href="<?php echo $twitter; ?>" rel="noopener noreferrer" target="_blank"></a></li>
+<li class="youtube"><a class="youtube" href="<?php echo $youtube; ?>" rel="noopener noreferrer" target="_blank"></a></li>
+<li class="instagram"><a class="instagram" href="<?php echo $instagram; ?>" rel="noopener noreferrer" target="_blank"></a></li>
+<li class="reddit"><a class="reddit" href="<?php echo $reddit; ?>" rel="noopener noreferrer" target="_blank"></a></li>
 </ul>
 </div>
 </div></div>
