@@ -5,8 +5,8 @@
 <div class="NewsFooter section" id="NewsFooter" name="Footer Info"><div class="widget Image" data-version="2" id="Image150">
 <div class="widget-content">
 <div class="footer-logo custom-image">
-<a href="https://labwas.blogspot.com/">
-<img alt="Labwas" id="Image150_img" src="https://blogger.googleusercontent.com/img/a/AVvXsEh5eGr80jUJBNwFqF5i-sQkPnYcLiF4e19GaFndY0FBOoPZPd7_CF_JlJ2G11bJsawmObD3-BHPNT-r4QimHMapF7CC7TacaD6usB0vLvcnnghQx9jdojvBVTB4Zqnp8iO4g77BzaxHyyIk0uWxRCCHC6YgRTZDQsm_IRJHI39K85QSXRfUHFNKpofAZs0=s150" style="visibility: visible;">
+<a href="<?php echo $linkr;?>">
+<img alt="Labwas" id="Image150_img" src="<?php echo $linkr;?>/BLUELOG.png">
 </a>
 </div>
 <div class="about-content">

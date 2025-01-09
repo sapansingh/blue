@@ -91,7 +91,7 @@ if(mysqli_num_rows($result)>0){
                                         <a class="show-SpeedL-container" href="javascript:;"></a>
                                         <a class="SuperLogo-img" href="https://newstazaat.com/">
                                             <img alt="Labwas" data-height="150" data-width="150"
-                                                src="https://blogger.googleusercontent.com/img/a/AVvXsEgln6Pf0X6O60R5vPIYJYkI-er9_rcPtPmeSwJnuIZ6EHMuryRcLSMS9nUDzY7sdtkcbby_8hiQ9pcEpq-sEjJl0W7Ol094wD3bzxy6MEp2oKc5wkg3K6Bn_ZGvNwabsmMIdEE4nRYQ3-v-7a_YCvBGEi_ePaGypO-7EnEUx58KQdwYwkWmersmP3JgbD8=s150">
+                                                src="<?php echo $linkr;?>/BLUELOG.png">
                                         </a>
                                     </div>
                                 </div>
