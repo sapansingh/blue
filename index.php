@@ -7,22 +7,23 @@ include "config.php";
 <!DOCTYPE html>
 <html>
 	<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 		<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
 		<link href="<?php echo $linkr;?>/lightspeed.css"  rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"  rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" type="text/javascript"></script>
-  <script type="text/javascript" src="dist/ResizeSensor.js"></script>
-        <script type="text/javascript" src="dist/theia-sticky-sidebar.js"></script>
-        <script type="text/javascript" src="js/test.js"></script>
+  <script type="text/javascript" src="<?php echo $linkr;?>/dist/ResizeSensor.js"></script>
+        <script type="text/javascript" src="<?php echo $linkr;?>/dist/theia-sticky-sidebar.js"></script>
 		<script type="text/javascript">
 //<![CDATA[
 (localStorage.getItem('mode')) === 'darkmode' ? document.querySelector('#mainContent').classList.add('dark'): document.querySelector('#mainContent').classList.remove('dark')
 //]]>
- </script>
+</script>
 		<style>
     /* Default Layout: Three columns (content, left sidebar, right sidebar) */
     .content {
-        width: 75%;
+        width: 70%;
         float: left;
         position: relative;
     }

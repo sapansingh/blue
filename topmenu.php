@@ -89,7 +89,7 @@ if(mysqli_num_rows($result)>0){
                                 <div class="SuperLogo section" id="SuperLogo" name="Main Logo">
                                     <div class="widget Header" data-version="2" id="Header1">
                                         <a class="show-SpeedL-container" href="javascript:;"></a>
-                                        <a class="SuperLogo-img" href="https://newstazaat.com/">
+                                        <a class="SuperLogo-img" href="<?php echo $linkr;?>">
                                             <img alt="Labwas" data-height="150" data-width="150"
                                                 src="<?php echo $linkr;?>/BLUELOG.png">
                                         </a>

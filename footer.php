@@ -6,7 +6,7 @@
 <div class="widget-content">
 <div class="footer-logo custom-image">
 <a href="<?php echo $linkr;?>">
-<img alt="Labwas" id="Image150_img" src="<?php echo $linkr;?>/BLUELOG.png">
+<img alt="Labwas" id="Image150_img" src="<?php echo $linkr;?>/BLUELOG.png" style="visibility: visible;">
 </a>
 </div>
 <div class="about-content">

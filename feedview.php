@@ -20,7 +20,7 @@
                             <div class="post-snip" itemprop="author" itemscope="itemscope"
                                 itemtype="https://schema.org/Person">
                                 <span class="comment-bubble show">
-                                    0</span>
+                                   <?php echo $hit_count;?></span>
                                 <span class="post-author" itemprop="name"> <?php echo $blog_auth;?></span>
                                 <span class="post-date published" datetime="<?php echo $reg_date;?>"><?php echo $reg_date;?></span>
                             </div>

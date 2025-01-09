@@ -6,10 +6,10 @@ $db="u853830974_blogs";
 $port="3306";
 $conn=mysqli_connect($server,$user,$pass,$db,$port);
 
-$web="http://localhost/blue/admin/upload/";
+$web="http://192.168.29.205/blue/admin/upload/";
 //$linkr="https://newst.com";
 //$web="https://newstazaat.com/admin/upload/";
-$linkr="http://localhost/blue";
+$linkr="http://192.168.29.205/blue";
 
 $footertitle="www.bluelog.in round-the-clock latest news, entertainment, technology, business, and lifestyle. The latest buzz, all in one place. Stay connected..!";
 ?>
