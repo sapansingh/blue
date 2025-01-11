@@ -1,4 +1,6 @@
 <?php
+ini_set('max_execution_time', 300);  // 300 seconds = 5 minutes
+
 session_start();
 $username=$_SESSION['username'];
 
@@ -61,7 +63,7 @@ include "navi.php";
 ?>
 
 <div class="container mt-3">
- <input type="text" name="imagesd" id="imagesd" placeholder="Image URL"><button id="imagebtn" class="btn btn-primary">getImgage</button>
+ <!-- <input type="text" name="imagesd" id="imagesd" placeholder="Image URL"><button id="imagebtn" class="btn btn-primary">getImgage</button> -->
   <form action="submit.php" method="post" id="submiter" enctype="multipart/form-data">
     <div class="form-floating mb-3 mt-3">
       <input type="text" class="form-control" id="title" placeholder="Enter Title" name="title">
@@ -71,7 +73,7 @@ include "navi.php";
 
   <?php
   
-  include "config.php";
+  include "../config.php";
   $sql="SELECT * FROM `category`";
 
   $result=mysqli_query($conn,$sql);
@@ -89,9 +91,9 @@ include "navi.php";
       $categ=$rows['category_name'];
       $cat_id=$rows['id'];
       echo "<option value='$cat_id'>$categ</option>";
-
     }
   }
+  mysqli_close($conn);
 
   ?>
 
@@ -100,15 +102,14 @@ include "navi.php";
 </div>
 </div>
 
-<div class="col">
+<!-- <div class="col">
 <div class="form-floating">
       <input type="text" class="form-control" id="url" placeholder="Enter url" name="url">
       <label for="title">URL</label>
     </div>
+</div>  -->
 
-</div> 
 <div class="col">
-or
       <input type="file" class="form-control" id="imger" placeholder="Enter img" name="imger">
      
 

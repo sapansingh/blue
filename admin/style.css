@@ -1,0 +1,188 @@
+/* General Layout */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+/* Toolbar container */
+.toolbar {
+  margin-bottom: 5px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* Styling the toolbar container */
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Space between toolbar items */
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* Style for individual toolbar buttons and inputs */
+.toolbar button,
+.toolbar select,
+.toolbar input[type="color"] {
+  font-size: 16px;
+  padding: 6px 12px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 0;
+}
+
+/* Hover effect for buttons and inputs */
+.toolbar button:hover,
+.toolbar select:hover,
+.toolbar input[type="color"]:hover {
+  background-color: #ddd;
+}
+
+/* Group buttons into clusters (if desired) */
+.toolbar .button-group {
+  display: flex;
+  gap: 5px; /* Adjust the space between grouped buttons */
+  align-items: center;
+}
+
+/* Optional: add a border or background to button groups */
+.toolbar .button-group {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+
+/* Content Area */
+.editor {
+  min-height: 300px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-size: 16px;
+  outline: none;
+}
+
+/* Placeholder text when editor is empty */
+.editor:empty:before {
+  content: "Type something...";
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Styling for links in the editor */
+a {
+  color: blue;
+  text-decoration: underline;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+/* Resizing Handles for Images */
+.editor img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  cursor: pointer;
+}
+
+.resize-handle {
+  width: 16px; /* Set explicit width for the handle */
+  height: 16px; /* Set explicit height for the handle */
+  background-color: rgba(0, 0, 0, 0.5); /* Background color */
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  cursor: se-resize;
+  border-radius: 50%; /* Optional: makes the resize handle circular */
+  z-index: 20; /* Ensures the handle is above the image */
+}
+
+/* Image container that allows resizing */
+.resizeable {
+  position: relative;
+  display: inline-block; /* Ensures it wraps around the image */
+}
+
+/* Code Block Styling */
+.code-block {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+  font-family: monospace;
+}
+
+.copy-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.copy-button:hover {
+  background-color: #45a049;
+}
+
+/* Blockquote styling with red color */
+blockquote {
+  background-color: #f9f9f9;
+  border-left: 4px solid red;
+  padding-left: 15px;
+  margin: 10px 0;
+  font-style: italic;
+  color: red;
+}
+#tableGridContainer {
+  position: absolute;
+  display: block;
+  z-index: 1000; /* Make sure the dropdown is on top of other content */
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+#tableGrid {
+  display: grid;
+  grid-template-columns: repeat(10, 30px);
+  grid-template-rows: repeat(10, 30px);
+  gap: 5px;
+  position: relative;
+}
+.grid-cell {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+}
+.highlighted {
+  background-color: rgba(0, 123, 255, 0.4);
+}

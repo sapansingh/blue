@@ -1,8 +1,10 @@
 <?php
+ini_set('max_execution_time', 300);  // 300 seconds = 5 minutes
+
 session_start();
 $username = $_SESSION['username'];
 $userenrollid = $_SESSION['userenrollid'];
-include "config.php";
+include "../config.php";
 $conn = mysqli_connect($server, $user, $pass, $db, $port);
 $title = mysqli_real_escape_string($conn, $_POST["title"]);
 $bodyt = $_POST["blog_post"];
@@ -67,11 +69,11 @@ if (file_exists("sitemap.xml")) {
         exit;
     }
 
-    // Ensure the linter variable is set correctly
-    if (empty($linter)) {
-        echo "Error: linter is not set!";
-        exit;
-    }
+    // // Ensure the linter variable is set correctly
+    // if (empty($linter)) {
+    //     echo "Error: linter is not set!";
+    //     exit;
+    // }
 
     // Add a new URL entry to the sitemap
     $member = $members->addChild('url');
@@ -92,4 +94,7 @@ mysqli_query($conn, $sql);
 
 header("Location: index.php");
 exit();
+
+
+mysqli_close($conn);
 ?>

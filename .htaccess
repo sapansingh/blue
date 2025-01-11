@@ -1,5 +1,5 @@
 RewriteEngine On
-ErrorDocument 404 http://192.168.29.205/blue/error404
+ErrorDocument 404 http://localhost/blue/error404
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f

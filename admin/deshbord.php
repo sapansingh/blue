@@ -3,14 +3,11 @@ session_start();
 $username=$_SESSION['username'];
 
 if($username==""){
-
-
   header("location:login.php");
-
 }
 
 $userird= $_SESSION["userenrollid"];
-include "config.php";
+include "../config.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -89,7 +86,7 @@ if(mysqli_num_rows($result)>0){
     $images=$rows["image"];
     $idsd=$rows["id"];
 
-   echo "<tr><td>$sn</td> <td>$title</td> <td><img src='https://aims-doc.com/admin/upload/$images' width='40px' /></td><td><a class='btn btn-danger' href='Update.php?ids=$idsd'>Update </a></td><td><a class='btn btn-danger' href='https://aims-doc.com/contents/$idsd/$title' target='_blank'>View</a></td></tr>";
+   echo "<tr><td>$sn</td> <td>$title</td> <td><img src='$linkr/admin/upload/$images' width='40px' /></td><td><a class='btn btn-danger' href='Update.php?ids=$idsd'>Update </a></td><td><a class='btn btn-danger' href='$linkr/contents/$idsd/$title' target='_blank'>View</a></td></tr>";
   }
 
 

@@ -1,6 +1,5 @@
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <a class="navbar-brand" href="#">Admin</a>
@@ -22,8 +21,7 @@
     </ul>
     <div class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-   
-</div>
-<a class="btn btn-outline-success my-2 my-sm-0" href="logout.php">Logout</a>
+    </div>
+    <a class="btn btn-outline-success my-2 my-sm-0" href="logout.php">Logout</a>
   </div>
 </nav>

@@ -1,7 +1,7 @@
 <?php
 session_start();
 $username=$_SESSION['username'];
-include "config.php";
+include "../config.php";
 $userenrollid=$_SESSION['userenrollid'];
 $conn=mysqli_connect($server,$user,$pass,$db,$port);
 $title=mysqli_real_escape_string($conn,$_POST["title"]);
@@ -77,6 +77,6 @@ mysqli_query($conn,$sql);
 
 header("location: deshbord.php");
 
-
+mysqli_close($conn);
 
 ?>

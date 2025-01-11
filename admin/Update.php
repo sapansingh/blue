@@ -1,4 +1,6 @@
 <?php
+ini_set('max_execution_time', 300);  // 300 seconds = 5 minutes
+
 session_start();
 $username=$_SESSION['username'];
 
@@ -100,6 +102,7 @@ $couter=$row['total_post'];
 
 }
 
+mysqli_close($conn);
 
 
 ?>
@@ -107,10 +110,10 @@ $couter=$row['total_post'];
 <div class="container mt-3">
  
 <?php
-include "config.php";
+  include "../config.php";
 
 ?>
-     <input type="text" name="imagesd" id="imagesd" placeholder="Image URL"><button id="imagebtn" class="btn btn-primary">getImgage</button>
+     <!-- <input type="text" name="imagesd" id="imagesd" placeholder="Image URL"><button id="imagebtn" class="btn btn-primary">getImgage</button> -->
 
 
   <form action="updatecontent.php" id="submiter" method="post" enctype="multipart/form-data">
@@ -163,12 +166,14 @@ include "config.php";
 </div>
 
 <div class="col">
-<div class="form-floating">
-      <input type="text" class="form-control" id="url" value="<?php echo  $image;?>" placeholder="Enter url" name="url">
+<input type="hidden" class="form-control" id="url" value="<?php echo  $image;?>" placeholder="Enter url" name="url">
+
+<!-- <div class="form-floating">
+      <input type="hidden" class="form-control" id="url" value="<?php echo  $image;?>" placeholder="Enter url" name="url">
       <label for="title">URL</label>
     </div>
 
-</div> 
+</div>  -->
 <div class="col">
 or
       <input type="file" class="form-control" id="imger" placeholder="Enter img" name="imger">
